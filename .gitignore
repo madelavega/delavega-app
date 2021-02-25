@@ -15,7 +15,7 @@ delavega-app/dist
 /coverage
 
 # production
-/dist
+/build
 
 # misc
 .DS_Store
