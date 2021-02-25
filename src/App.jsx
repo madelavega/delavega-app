@@ -3,6 +3,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import DropDownContainer from './DateSelector/Container';
 import EuroJackpotResults from './EuroJackpotResults/Container';
+//import our delavega-lib web components
+import 'delavega-lib';
+
 import Page404 from './errors/404';
 
 export default function App() {

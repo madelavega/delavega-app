@@ -3,12 +3,12 @@ import DateSelector from './index';
 import { connect } from 'react-redux';
 const mapStateToProps = (state) => {
     const {
-        dateSelector : { data, selectedDate },
+        dateSelector : { dates, selectedDate },
 
     } = state;
 
     return {
-        data,
+        dates,
         selectedDate,
     };
 };

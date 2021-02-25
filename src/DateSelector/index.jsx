@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
-import 'delavega-lib';
 
 function DateSelector(props) {
     let history = useHistory();
@@ -21,12 +20,16 @@ function DateSelector(props) {
     };
 
     /**
+     * because the nature of the web components and their imperative approach and react ones is declarative,
+     * we need to access them throw refs and changes their attributes like this.
      *
+     * Besides, in this particular case, we need to subscribe to a component event, but react doesn't support
+     * native DOM events for now
      */
     useEffect(() => {
-        const { data, defaultEmptyValue } = props,
+        const { dates, defaultEmptyValue } = props,
             currentNode = dropDown.current;
-        currentNode.data = data;
+        currentNode.data = dates;
         currentNode.defaultEmptyValue = defaultEmptyValue;
         currentNode.value = selectedDate;
         currentNode.addEventListener('selected', onSelected);
@@ -46,7 +49,7 @@ function DateSelector(props) {
 }
 
 DateSelector.propTypes = {
-    data: PropTypes.arrayOf(PropTypes.shape({
+    dates: PropTypes.arrayOf(PropTypes.shape({
         value: PropTypes.string,
         text : PropTypes.string,
     })),
