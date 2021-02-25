@@ -22,7 +22,7 @@ module.exports = {
      output : {
          path      : path.resolve(appRoot, 'build'),
          filename  : '[name].js',
-         publicPath: '/',
+         publicPath: '/delavega-app/',
      },
     module: {
         rules ,
