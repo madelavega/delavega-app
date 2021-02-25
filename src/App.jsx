@@ -7,7 +7,8 @@ import EuroJackpotResults from './EuroJackpotResults/Container';
 import 'delavega-lib';
 
 import Page404 from './errors/404';
-
+console.log(`${appEnvConfig.environment.ROOT_PATH}/results/:date(\\d{2}-\\d{2}-\\d{4})`)
+console.log(`${appEnvConfig.environment.ROOT_PATH}`)
 export default function App() {
     return (
         <BrowserRouter>
@@ -15,7 +16,7 @@ export default function App() {
                 <Route exact path={`${appEnvConfig.environment.ROOT_PATH}`}>
                     <DropDownContainer defaultEmptyValue={true}/>
                 </Route>
-                <Route path={`${appEnvConfig.environment.ROOT_PATH}//results/:date(\\d{2}-\\d{2}-\\d{4})`} component={EuroJackpotResults} />
+                <Route path={`${appEnvConfig.environment.ROOT_PATH}results/:date(\\d{2}-\\d{2}-\\d{4})`} component={EuroJackpotResults} />
                 <Route path="*" component={Page404}/>
             </Switch>
         </BrowserRouter>
