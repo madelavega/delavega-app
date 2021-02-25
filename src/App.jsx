@@ -7,8 +7,6 @@ import EuroJackpotResults from './EuroJackpotResults/Container';
 import 'delavega-lib';
 
 import Page404 from './errors/404';
-console.log(`${appEnvConfig.environment.ROOT_PATH}/results/:date(\\d{2}-\\d{2}-\\d{4})`)
-console.log(`${appEnvConfig.environment.ROOT_PATH}`)
 export default function App() {
     return (
         <BrowserRouter>
