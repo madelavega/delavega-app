@@ -20,7 +20,7 @@ module.exports = {
     mode : 'production',
     entry : './src/index.js' ,
      output : {
-         path      : path.resolve(appRoot, 'dist'),
+         path      : path.resolve(appRoot, 'build'),
          filename  : '[name].js',
          publicPath: '/',
      },
