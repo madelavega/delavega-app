@@ -3,6 +3,9 @@
     "eslint:recommended",
     "plugin:react/recommended"
   ],
+  "globals" : {
+    "appEnvConfig"  : true
+  },
 
   "parserOptions": {
     "ecmaFeatures": {

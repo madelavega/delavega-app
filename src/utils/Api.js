@@ -71,7 +71,7 @@ const methods = [ 'get', 'post', 'put', 'delete' ],
                 response.json().then(json => {
                     resolve(json);
                 }).catch(e => {
-                    reject(formatError({ message: 'Malformed JSON', stackTrace: e, url: ul }));
+                    reject(formatError({ message: 'Malformed JSON', stackTrace: e, url: url }));
                 });
             } else {
                 reject(formatError({

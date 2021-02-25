@@ -1,17 +1,17 @@
 import EuroJackpotResults from './index';
 import { connect } from 'react-redux';
-import { actionCreators } from '../DateSelector/actions';
+import { actionCreators } from './actions';
 
 const mapStateToProps = (state) => {
     const {
-        euroJackpotResults : { data },
+        euroJackpotResults : { data, loading },
     } = state;
 
     return {
         data,
+        loading
     };
 };
-
 
 const mapDispatchToProps = dispatch => {
     return {
