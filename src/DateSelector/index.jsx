@@ -15,7 +15,7 @@ function DateSelector(props) {
     const onSelected = ({ detail : { selectedValue } }) => {
         props.selectDate?.(selectedValue);
         if(!!selectedValue && selectedValue !== selectedDate) {
-            history.push(`/results/${selectedValue}`);
+            history.push(` ${appEnvConfig.environment.ROOT_PATH}results/${selectedValue}`);
         }
     };
 
