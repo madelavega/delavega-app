@@ -1,5 +1,10 @@
 {
   "name": "delavega-app",
+  "description": "Little app create with react and litElement components",
+  "author": {
+    "name": "Manuel de la Vega Arantave",
+    "email": "maandelavega@gmail.com"
+  },
   "version": "0.1.0",
   "dependencies": {
     "delavega-lib": "^0.1.0",
